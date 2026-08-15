@@ -1,0 +1,60 @@
+const PHASES = [
+  {
+    step: "01",
+    title: "Discovery & Brief",
+    description:
+      "We translate your goals — budget, timeline, lifestyle, investment horizon — into a precise search brief and target areas."
+  },
+  {
+    step: "02",
+    title: "Market Intelligence",
+    description:
+      "Off-market access and live comparable data narrow the field to properties that meet your brief and hold their value."
+  },
+  {
+    step: "03",
+    title: "Viewings & Due Diligence",
+    description:
+      "We view on your behalf or alongside you, and commission the surveys, tenure, and title checks before you commit."
+  },
+  {
+    step: "04",
+    title: "Negotiation",
+    description:
+      "Every offer is benchmarked against verified local sales data, so you know the fair price before you name one."
+  },
+  {
+    step: "05",
+    title: "Completion & Handover",
+    description:
+      "We coordinate solicitors, lenders, and surveyors through exchange and completion, and stay on for the handover."
+  }
+]
+
+export function Journey() {
+  return (
+    <section id="process" className="border-b border-ink-700/60 bg-ink-900/40">
+      <div className="mx-auto max-w-6xl px-6 py-24">
+        <div className="max-w-2xl">
+          <p className="text-xs font-medium uppercase tracking-widest2 text-accent-400">The Process</p>
+          <h2 className="mt-4 font-display text-3xl font-medium text-white sm:text-4xl">
+            Five phases, one point of contact
+          </h2>
+          <p className="mt-4 text-white/70">
+            A structured path from your first brief to keys in hand — built for buyers who can&rsquo;t
+            be on the ground in London every step of the way.
+          </p>
+        </div>
+        <ol className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
+          {PHASES.map((phase) => (
+            <li key={phase.step} className="relative border-t border-ink-600 pt-6">
+              <span className="font-display text-sm text-accent-500">{phase.step}</span>
+              <h3 className="mt-3 font-display text-lg font-medium text-white">{phase.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-white/60">{phase.description}</p>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+  )
+}
