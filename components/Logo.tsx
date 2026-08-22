@@ -24,38 +24,38 @@ export function Logo({ className = "", variant = "mark" }: LogoProps) {
 
   return (
     <svg viewBox="0 0 200 200" className={className} role="img" aria-label="London Residential Advisors">
-      <rect x="6" y="6" width="188" height="188" fill="#0B1B12" stroke="#F7F5EF" strokeWidth="4" />
+      <rect x="6" y="6" width="188" height="188" fill="#0B1B12" stroke="#FFFFFF" strokeWidth="4" />
       <text
         x="100"
-        y="90"
+        y="108"
         textAnchor="middle"
         fontFamily={GEIST_SANS_STACK}
         fontWeight="700"
-        fontSize="64"
-        fill="#F7F5EF"
+        fontSize="85.71"
+        fill="#FFFFFF"
         letterSpacing="-2">
         LDN
       </text>
       <text
         x="100"
-        y="126"
+        y="144"
         textAnchor="middle"
         fontFamily={GEIST_SANS_STACK}
         fontWeight="700"
-        fontSize="20"
-        fill="#F7F5EF"
-        letterSpacing="0.5">
+        fontSize="26"
+        fill="#FFFFFF"
+        letterSpacing="2.27">
         Residential
       </text>
       <text
         x="100"
-        y="156"
+        y="178"
         textAnchor="middle"
         fontFamily={GEIST_SANS_STACK}
         fontWeight="700"
-        fontSize="20"
-        fill="#F7F5EF"
-        letterSpacing="6">
+        fontSize="24"
+        fill="#FFFFFF"
+        letterSpacing="5.45">
         ADVISORS
       </text>
     </svg>
