@@ -25,7 +25,7 @@ export function Services() {
     <section id="services" className="border-b border-ink-700/60 bg-ink-900/40">
       <div className="mx-auto max-w-6xl px-6 py-24">
         <div className="max-w-2xl">
-          <p className="font-mono text-xs uppercase tracking-widest text-emerald-400">Services</p>
+          <p className="font-sans text-xs uppercase tracking-widest font-medium text-white/80">Services</p>
           <h2 className="mt-4 font-sans text-3xl font-medium tracking-tight text-white sm:text-4xl">
             Advisory, not just introductions
           </h2>

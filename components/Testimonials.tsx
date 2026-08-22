@@ -48,7 +48,7 @@ export function Testimonials() {
     <section className="border-b border-ink-700/60">
       <div className="mx-auto max-w-6xl px-6 py-24">
         <div className="max-w-2xl">
-          <p className="font-mono text-xs uppercase tracking-widest text-emerald-400">Client Experience</p>
+          <p className="font-sans text-xs uppercase tracking-widest font-medium text-white/80">Client Experience</p>
           <h2 className="mt-4 font-sans text-3xl font-medium tracking-tight text-white sm:text-4xl">Trusted by Buyers</h2>
           <p className="mt-4 font-sans text-base font-normal leading-relaxed text-slate-300">
             What our clients say about working with Alex.
@@ -81,7 +81,7 @@ export function Testimonials() {
                     </button>
                   )}
                 </div>
-                <figcaption className="mt-6 font-mono text-xs uppercase tracking-widest text-emerald-400">
+                <figcaption className="mt-6 font-sans text-xs uppercase tracking-widest font-medium text-white/80">
                   {testimonial.author}
                 </figcaption>
               </figure>

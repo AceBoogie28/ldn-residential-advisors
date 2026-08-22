@@ -53,7 +53,7 @@ export function ContactForm() {
         placeholder="e.g. Singapore, New York, Dubai"
       />
       <div>
-        <label htmlFor="message" className="mb-2 block font-mono text-xs uppercase tracking-widest text-emerald-400">
+        <label htmlFor="message" className="mb-2 block font-sans text-xs uppercase tracking-widest font-medium text-white/80">
           Tell us about your search
         </label>
         <textarea
@@ -93,7 +93,7 @@ function Field({
 }) {
   return (
     <div>
-      <label htmlFor={name} className="mb-2 block font-mono text-xs uppercase tracking-widest text-emerald-400">
+      <label htmlFor={name} className="mb-2 block font-sans text-xs uppercase tracking-widest font-medium text-white/80">
         {label}
       </label>
       <input

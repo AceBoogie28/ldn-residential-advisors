@@ -26,7 +26,7 @@ export function Pillars() {
     <section id="why-us" className="border-b border-ink-700/60">
       <div className="mx-auto max-w-6xl px-6 py-24">
         <div className="max-w-2xl">
-          <p className="font-mono text-xs uppercase tracking-widest text-emerald-400">Why Us</p>
+          <p className="font-sans text-xs uppercase tracking-widest font-medium text-white/80">Why Us</p>
           <h2 className="mt-4 font-sans text-3xl font-medium tracking-tight text-white sm:text-4xl">
             Built for buyers who need a trusted resource, not a salesperson
           </h2>

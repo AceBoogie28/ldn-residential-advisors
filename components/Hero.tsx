@@ -6,7 +6,7 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 -z-10 opacity-50 [background-image:linear-gradient(to_right,rgba(203,186,149,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(203,186,149,0.06)_1px,transparent_1px)] [background-size:48px_48px] [mask-image:radial-gradient(ellipse_65%_55%_at_50%_0%,black,transparent)]"
       />
       <div className="mx-auto max-w-4xl px-6 py-28 text-center sm:py-36">
-        <span className="inline-flex items-center gap-2 rounded-full border border-accent-500/40 px-4 py-1.5 font-mono text-xs uppercase tracking-widest text-emerald-400">
+        <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 font-sans text-xs uppercase tracking-widest font-medium text-white/80">
           London Property Advisory
         </span>
         <h1 className="mt-8 font-sans text-4xl font-semibold leading-tight tracking-tighter text-white sm:text-5xl lg:text-6xl">
@@ -29,7 +29,7 @@ export function Hero() {
             See how it works
           </a>
         </div>
-        <p className="mt-8 font-mono text-xs uppercase tracking-widest text-emerald-400">
+        <p className="mt-8 font-sans text-xs uppercase tracking-widest font-medium text-white/80">
           Independent · Discreet · Data-Led
         </p>
       </div>

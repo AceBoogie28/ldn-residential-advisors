@@ -5,7 +5,7 @@ export function Contact() {
     <section id="contact" className="bg-ink-900/40">
       <div className="mx-auto grid max-w-6xl gap-16 px-6 py-24 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
-          <p className="font-mono text-xs uppercase tracking-widest text-emerald-400">Contact</p>
+          <p className="font-sans text-xs uppercase tracking-widest font-medium text-white/80">Contact</p>
           <h2 className="mt-4 font-sans text-3xl font-medium tracking-tight text-white sm:text-4xl">
             Start with a confidential brief
           </h2>
@@ -14,7 +14,7 @@ export function Contact() {
             respond within one business day with next steps.
           </p>
           <div className="mt-10 space-y-2">
-            <p className="font-mono text-xs uppercase tracking-widest text-emerald-400">
+            <p className="font-sans text-xs uppercase tracking-widest font-medium text-white/80">
               team@londonresidentialadvisors.com
             </p>
           </div>

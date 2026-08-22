@@ -36,7 +36,7 @@ export function Journey() {
     <section id="process" className="border-b border-ink-700/60 bg-ink-900/40">
       <div className="mx-auto max-w-6xl px-6 py-24">
         <div className="max-w-2xl">
-          <p className="font-mono text-xs uppercase tracking-widest text-emerald-400">The Process</p>
+          <p className="font-sans text-xs uppercase tracking-widest font-medium text-white/80">The Process</p>
           <h2 className="mt-4 font-sans text-3xl font-medium tracking-tight text-white sm:text-4xl">
             Five phases, one point of contact
           </h2>
@@ -48,7 +48,7 @@ export function Journey() {
         <ol className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
           {PHASES.map((phase) => (
             <li key={phase.step} className="relative border-t border-ink-600 pt-6">
-              <span className="font-mono text-xs uppercase tracking-widest text-emerald-400">{phase.step}</span>
+              <span className="font-sans text-xs uppercase tracking-widest font-medium text-white/80">{phase.step}</span>
               <h3 className="mt-3 font-sans text-lg font-medium tracking-tight text-white">{phase.title}</h3>
               <p className="mt-2 font-sans text-sm font-normal leading-relaxed text-slate-300">{phase.description}</p>
             </li>
