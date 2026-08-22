@@ -1,6 +1,9 @@
 "use client"
 
 import { useState } from "react"
+import { motion } from "framer-motion"
+
+import { AmbientGlow } from "./AmbientGlow"
 
 const TESTIMONIALS = [
   {
@@ -47,7 +50,13 @@ export function Testimonials() {
   return (
     <section className="border-b border-white/10">
       <div className="mx-auto max-w-6xl px-6 py-24">
-        <div className="max-w-2xl">
+        <motion.div
+          className="relative max-w-2xl"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}>
+          <AmbientGlow className="left-1/4 top-0" />
           <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 font-sans text-xs uppercase tracking-widest text-white/90 backdrop-blur-sm">
             Client Experience
           </p>
@@ -55,8 +64,13 @@ export function Testimonials() {
           <p className="mt-4 font-sans text-base font-normal leading-relaxed text-white/80">
             What our clients say about working with Alex.
           </p>
-        </div>
-        <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-3">
+        </motion.div>
+        <motion.div
+          className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-3"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}>
           {TESTIMONIALS.map((testimonial, index) => {
             const isLong = testimonial.quote.length > TRUNCATE_LENGTH
             const isExpanded = expandedIndex.has(index)
@@ -65,7 +79,7 @@ export function Testimonials() {
             return (
               <figure
                 key={testimonial.author}
-                className="flex flex-col justify-between rounded-2xl border border-white/10 bg-white/[0.02] p-8 backdrop-blur-sm">
+                className="flex flex-col justify-between rounded-2xl border border-white/10 bg-white/[0.02] p-8 backdrop-blur-sm transition-all duration-300 hover:border-white/25 hover:bg-white/[0.05] hover:shadow-[0_0_30px_rgba(255,255,255,0.03)]">
                 <div>
                   <span aria-hidden="true" className="font-display text-5xl leading-none text-white/20">
                     &ldquo;
@@ -89,7 +103,7 @@ export function Testimonials() {
               </figure>
             )
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   )

@@ -1,3 +1,5 @@
+import { AmbientGlow } from "./AmbientGlow"
+
 export function Hero() {
   return (
     <section className="relative overflow-hidden border-b border-white/10">
@@ -5,7 +7,8 @@ export function Hero() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-10 opacity-50 [background-image:linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] [background-size:48px_48px] [mask-image:radial-gradient(ellipse_65%_55%_at_50%_0%,black,transparent)]"
       />
-      <div className="mx-auto max-w-4xl px-6 py-28 text-center sm:py-36">
+      <div className="relative mx-auto max-w-4xl px-6 py-28 text-center sm:py-36">
+        <AmbientGlow className="left-1/2 top-1/2 -translate-y-1/2" />
         <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 font-sans text-xs uppercase tracking-widest text-white/90 backdrop-blur-sm">
           London Property Advisory
         </span>

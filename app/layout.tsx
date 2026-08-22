@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import { GeistSans } from "geist/font/sans"
 
+import { NoiseOverlay } from "~/components/NoiseOverlay"
+
 import "./globals.css"
 
 export const metadata: Metadata = {
@@ -16,7 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={GeistSans.variable}>
-      <body className="bg-ink font-sans text-white antialiased">{children}</body>
+      <body className="bg-ink font-sans text-white antialiased">
+        <NoiseOverlay />
+        {children}
+      </body>
     </html>
   )
 }

@@ -1,10 +1,12 @@
 import { ContactForm } from "./ContactForm"
+import { AmbientGlow } from "./AmbientGlow"
 
 export function Contact() {
   return (
     <section id="contact" className="bg-white/[0.02]">
       <div className="mx-auto grid max-w-6xl gap-16 px-6 py-24 lg:grid-cols-[0.9fr_1.1fr]">
-        <div>
+        <div className="relative">
+          <AmbientGlow className="left-1/4 top-0" />
           <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 font-sans text-xs uppercase tracking-widest text-white/90 backdrop-blur-sm">
             Contact
           </p>

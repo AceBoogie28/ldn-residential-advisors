@@ -1,3 +1,5 @@
+import { AmbientGlow } from "./AmbientGlow"
+
 const SERVICES = [
   {
     title: "Property Search & Acquisition",
@@ -24,7 +26,8 @@ export function Services() {
   return (
     <section id="services" className="border-b border-white/10 bg-white/[0.02]">
       <div className="mx-auto max-w-6xl px-6 py-24">
-        <div className="max-w-2xl">
+        <div className="relative max-w-2xl">
+          <AmbientGlow className="left-1/4 top-0" />
           <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 font-sans text-xs uppercase tracking-widest text-white/90 backdrop-blur-sm">
             Services
           </p>
