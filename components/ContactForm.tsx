@@ -33,8 +33,8 @@ export function ContactForm() {
   if (status === "success") {
     return (
       <div className="rounded-2xl border border-accent-500/30 bg-accent-500/[0.06] p-8 text-center">
-        <p className="font-display text-xl font-medium text-white">Thank you.</p>
-        <p className="mt-2 text-sm text-white/60">
+        <p className="font-sans text-xl font-medium tracking-tight text-white">Thank you.</p>
+        <p className="mt-2 font-sans text-sm font-normal leading-relaxed text-slate-300">
           We&rsquo;ve received your enquiry and will be in touch within one business day.
         </p>
       </div>
@@ -53,7 +53,7 @@ export function ContactForm() {
         placeholder="e.g. Singapore, New York, Dubai"
       />
       <div>
-        <label htmlFor="message" className="mb-2 block text-xs font-medium uppercase tracking-widest2 text-white/50">
+        <label htmlFor="message" className="mb-2 block font-mono text-xs uppercase tracking-widest text-emerald-400">
           Tell us about your search
         </label>
         <textarea
@@ -93,7 +93,7 @@ function Field({
 }) {
   return (
     <div>
-      <label htmlFor={name} className="mb-2 block text-xs font-medium uppercase tracking-widest2 text-white/50">
+      <label htmlFor={name} className="mb-2 block font-mono text-xs uppercase tracking-widest text-emerald-400">
         {label}
       </label>
       <input

@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss"
-import defaultTheme from "tailwindcss/defaultTheme"
 
 const config: Config = {
   content: [
@@ -24,11 +23,9 @@ const config: Config = {
         }
       },
       fontFamily: {
-        display: ["var(--font-fraunces)", ...defaultTheme.fontFamily.serif],
-        sans: ["var(--font-inter)", ...defaultTheme.fontFamily.sans]
-      },
-      letterSpacing: {
-        widest2: "0.28em"
+        sans: ["var(--font-geist-sans)", "sans-serif"],
+        display: ["var(--font-geist-sans)", "sans-serif"],
+        mono: ["var(--font-geist-mono)", "monospace"]
       }
     }
   },

@@ -48,9 +48,11 @@ export function Testimonials() {
     <section className="border-b border-ink-700/60">
       <div className="mx-auto max-w-6xl px-6 py-24">
         <div className="max-w-2xl">
-          <p className="text-xs font-medium uppercase tracking-widest2 text-accent-400">Client Experience</p>
-          <h2 className="mt-4 font-display text-3xl font-medium text-white sm:text-4xl">Trusted by Buyers</h2>
-          <p className="mt-4 text-white/70">What our clients say about working with Alex.</p>
+          <p className="font-mono text-xs uppercase tracking-widest text-emerald-400">Client Experience</p>
+          <h2 className="mt-4 font-sans text-3xl font-medium tracking-tight text-white sm:text-4xl">Trusted by Buyers</h2>
+          <p className="mt-4 font-sans text-base font-normal leading-relaxed text-slate-300">
+            What our clients say about working with Alex.
+          </p>
         </div>
         <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-3">
           {TESTIMONIALS.map((testimonial, index) => {
@@ -66,7 +68,7 @@ export function Testimonials() {
                   <span aria-hidden="true" className="font-display text-5xl leading-none text-accent-500/50">
                     &ldquo;
                   </span>
-                  <blockquote className="mt-3 text-sm leading-relaxed text-white/75 transition-[height]">
+                  <blockquote className="mt-3 font-sans text-sm font-normal leading-relaxed text-slate-300 transition-[height]">
                     {displayText}
                   </blockquote>
                   {isLong && (
@@ -79,7 +81,7 @@ export function Testimonials() {
                     </button>
                   )}
                 </div>
-                <figcaption className="mt-6 text-xs font-medium uppercase tracking-widest2 text-accent-400">
+                <figcaption className="mt-6 font-mono text-xs uppercase tracking-widest text-emerald-400">
                   {testimonial.author}
                 </figcaption>
               </figure>

@@ -25,8 +25,8 @@ export function Services() {
     <section id="services" className="border-b border-ink-700/60 bg-ink-900/40">
       <div className="mx-auto max-w-6xl px-6 py-24">
         <div className="max-w-2xl">
-          <p className="text-xs font-medium uppercase tracking-widest2 text-accent-400">Services</p>
-          <h2 className="mt-4 font-display text-3xl font-medium text-white sm:text-4xl">
+          <p className="font-mono text-xs uppercase tracking-widest text-emerald-400">Services</p>
+          <h2 className="mt-4 font-sans text-3xl font-medium tracking-tight text-white sm:text-4xl">
             Advisory, not just introductions
           </h2>
         </div>
@@ -35,8 +35,8 @@ export function Services() {
             <div
               key={service.title}
               className="rounded-2xl border border-ink-700 bg-ink-950/60 p-8 transition hover:border-accent-500/40">
-              <h3 className="font-display text-xl font-medium text-white">{service.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-white/60">{service.description}</p>
+              <h3 className="font-sans text-xl font-medium tracking-tight text-white">{service.title}</h3>
+              <p className="mt-3 font-sans text-sm font-normal leading-relaxed text-slate-300">{service.description}</p>
             </div>
           ))}
         </div>
