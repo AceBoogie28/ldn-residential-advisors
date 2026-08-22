@@ -9,7 +9,7 @@ const LINKS = [
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-ink-700/60 bg-ink-950/85 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-ink/85 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Logo className="h-10 w-10 shrink-0" />
         <nav className="hidden items-center gap-8 md:flex">
@@ -24,7 +24,7 @@ export function Header() {
         </nav>
         <a
           href="#contact"
-          className="rounded-full border border-accent-500/60 px-4 py-2 text-sm font-medium text-accent-400 transition hover:border-accent-400 hover:bg-accent-500/10 hover:text-accent-300">
+          className="rounded-full bg-white px-6 py-3 text-sm font-medium text-[#041A10] shadow-sm transition-all hover:bg-white/90">
           Book a Consultation
         </a>
       </div>

@@ -16,7 +16,7 @@ export function Logo({ className = "", variant = "mark" }: LogoProps) {
       <div className={`flex items-center gap-3 ${className}`}>
         <Logo variant="mark" className="h-9 w-9 shrink-0" />
         <span className="font-sans text-lg font-medium tracking-wide text-white">
-          London <span className="text-accent-400">Residential Advisors</span>
+          London Residential Advisors
         </span>
       </div>
     )
@@ -24,7 +24,7 @@ export function Logo({ className = "", variant = "mark" }: LogoProps) {
 
   return (
     <svg viewBox="0 0 200 200" className={className} role="img" aria-label="London Residential Advisors">
-      <rect x="6" y="6" width="188" height="188" fill="#0B1B12" stroke="#FFFFFF" strokeWidth="4" />
+      <rect x="6" y="6" width="188" height="188" fill="#041A10" stroke="#FFFFFF" strokeWidth="4" />
       <text
         x="100"
         y="108"

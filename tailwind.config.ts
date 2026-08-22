@@ -8,19 +8,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: {
-          950: "#060F0A",
-          900: "#0B1B12",
-          800: "#122A1C",
-          700: "#1B3D28",
-          600: "#265136",
-          500: "#356B49"
-        },
-        accent: {
-          400: "#DDD2BA",
-          500: "#CBBA95",
-          600: "#A6916A"
-        }
+        ink: "#041A10"
       },
       fontFamily: {
         sans: ["var(--font-geist-sans)", "sans-serif"],

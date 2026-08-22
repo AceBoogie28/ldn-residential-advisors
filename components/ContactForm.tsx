@@ -32,9 +32,9 @@ export function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="rounded-2xl border border-accent-500/30 bg-accent-500/[0.06] p-8 text-center">
+      <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-8 text-center backdrop-blur-sm">
         <p className="font-sans text-xl font-medium tracking-tight text-white">Thank you.</p>
-        <p className="mt-2 font-sans text-sm font-normal leading-relaxed text-slate-300">
+        <p className="mt-2 font-sans text-sm font-normal leading-relaxed text-white/80">
           We&rsquo;ve received your enquiry and will be in touch within one business day.
         </p>
       </div>
@@ -53,7 +53,7 @@ export function ContactForm() {
         placeholder="e.g. Singapore, New York, Dubai"
       />
       <div>
-        <label htmlFor="message" className="mb-2 block font-sans text-xs uppercase tracking-widest font-medium text-white/80">
+        <label htmlFor="message" className="mb-2 block font-sans text-xs uppercase tracking-widest text-white/90">
           Tell us about your search
         </label>
         <textarea
@@ -61,14 +61,14 @@ export function ContactForm() {
           name="message"
           rows={4}
           required
-          className="w-full rounded-xl border border-ink-600 bg-ink-950/60 px-4 py-3 text-sm text-white placeholder:text-white/30 focus:border-accent-500 focus:outline-none"
+          className="w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/30 focus:border-white/40 focus:outline-none"
           placeholder="Budget, target areas, timeline..."
         />
       </div>
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="rounded-full bg-accent-500 px-7 py-3 text-sm font-semibold text-ink-950 transition hover:bg-accent-400 disabled:cursor-not-allowed disabled:opacity-60">
+        className="rounded-full bg-white px-6 py-3 text-sm font-medium text-[#041A10] shadow-sm transition-all hover:bg-white/90 disabled:cursor-not-allowed disabled:opacity-60">
         {status === "submitting" ? "Sending…" : "Send Enquiry"}
       </button>
       {status === "error" && (
@@ -93,7 +93,7 @@ function Field({
 }) {
   return (
     <div>
-      <label htmlFor={name} className="mb-2 block font-sans text-xs uppercase tracking-widest font-medium text-white/80">
+      <label htmlFor={name} className="mb-2 block font-sans text-xs uppercase tracking-widest text-white/90">
         {label}
       </label>
       <input
@@ -102,7 +102,7 @@ function Field({
         type={type}
         required={required}
         placeholder={placeholder}
-        className="w-full rounded-xl border border-ink-600 bg-ink-950/60 px-4 py-3 text-sm text-white placeholder:text-white/30 focus:border-accent-500 focus:outline-none"
+        className="w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/30 focus:border-white/40 focus:outline-none"
       />
     </div>
   )

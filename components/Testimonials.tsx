@@ -45,12 +45,14 @@ export function Testimonials() {
   }
 
   return (
-    <section className="border-b border-ink-700/60">
+    <section className="border-b border-white/10">
       <div className="mx-auto max-w-6xl px-6 py-24">
         <div className="max-w-2xl">
-          <p className="font-sans text-xs uppercase tracking-widest font-medium text-white/80">Client Experience</p>
+          <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 font-sans text-xs uppercase tracking-widest text-white/90 backdrop-blur-sm">
+            Client Experience
+          </p>
           <h2 className="mt-4 font-sans text-3xl font-medium tracking-tight text-white sm:text-4xl">Trusted by Buyers</h2>
-          <p className="mt-4 font-sans text-base font-normal leading-relaxed text-slate-300">
+          <p className="mt-4 font-sans text-base font-normal leading-relaxed text-white/80">
             What our clients say about working with Alex.
           </p>
         </div>
@@ -63,12 +65,12 @@ export function Testimonials() {
             return (
               <figure
                 key={testimonial.author}
-                className="flex flex-col justify-between rounded-2xl border border-ink-700 bg-ink-900/60 p-8">
+                className="flex flex-col justify-between rounded-2xl border border-white/10 bg-white/[0.02] p-8 backdrop-blur-sm">
                 <div>
-                  <span aria-hidden="true" className="font-display text-5xl leading-none text-accent-500/50">
+                  <span aria-hidden="true" className="font-display text-5xl leading-none text-white/20">
                     &ldquo;
                   </span>
-                  <blockquote className="mt-3 font-sans text-sm font-normal leading-relaxed text-slate-300 transition-[height]">
+                  <blockquote className="mt-3 font-sans text-sm font-normal leading-relaxed text-white/80 transition-[height]">
                     {displayText}
                   </blockquote>
                   {isLong && (
@@ -76,12 +78,12 @@ export function Testimonials() {
                       type="button"
                       onClick={() => toggle(index)}
                       aria-expanded={isExpanded}
-                      className="mt-3 text-xs font-semibold uppercase tracking-wider text-white/50 transition-colors hover:text-accent-400">
+                      className="mt-3 text-xs font-semibold uppercase tracking-wider text-white/50 transition-colors hover:text-white">
                       {isExpanded ? "Read Less" : "Read More"}
                     </button>
                   )}
                 </div>
-                <figcaption className="mt-6 font-sans text-xs uppercase tracking-widest font-medium text-white/80">
+                <figcaption className="mt-6 font-sans text-xs uppercase tracking-widest text-white/90">
                   {testimonial.author}
                 </figcaption>
               </figure>
