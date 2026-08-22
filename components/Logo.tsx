@@ -3,17 +3,19 @@ interface LogoProps {
   variant?: "mark" | "wordmark"
 }
 
+const GEIST_SANS_STACK = "var(--font-geist-sans), Helvetica, Arial, sans-serif"
+
 /**
- * Square 3-line mark: LDN / Residential / Advisors, refined from the founder's
- * original sketch — tighter kerning, a hairline rule to separate the wordmark
- * from the initials, and a double-border frame for a stamped/seal feel.
+ * Square 3-line mark: LDN / Residential / Advisors, set in Geist Sans (the
+ * site's own typeface) to match the reference redraw — bold grotesque type,
+ * single border, no accent tint or divider rule.
  */
 export function Logo({ className = "", variant = "mark" }: LogoProps) {
   if (variant === "wordmark") {
     return (
       <div className={`flex items-center gap-3 ${className}`}>
         <Logo variant="mark" className="h-9 w-9 shrink-0" />
-        <span className="font-display text-lg font-medium tracking-wide text-white">
+        <span className="font-sans text-lg font-medium tracking-wide text-white">
           London <span className="text-accent-400">Residential Advisors</span>
         </span>
       </div>
@@ -22,40 +24,38 @@ export function Logo({ className = "", variant = "mark" }: LogoProps) {
 
   return (
     <svg viewBox="0 0 200 200" className={className} role="img" aria-label="London Residential Advisors">
-      <rect x="4" y="4" width="192" height="192" fill="#0B1B12" stroke="#F7F5EF" strokeWidth="3" />
-      <rect x="14" y="14" width="172" height="172" fill="none" stroke="#F7F5EF" strokeWidth="1" />
+      <rect x="6" y="6" width="188" height="188" fill="#0B1B12" stroke="#F7F5EF" strokeWidth="4" />
       <text
         x="100"
-        y="86"
+        y="90"
         textAnchor="middle"
-        fontFamily="'Fraunces', Georgia, serif"
-        fontWeight="600"
-        fontSize="58"
+        fontFamily={GEIST_SANS_STACK}
+        fontWeight="700"
+        fontSize="64"
         fill="#F7F5EF"
-        letterSpacing="2">
+        letterSpacing="-2">
         LDN
       </text>
-      <line x1="46" y1="104" x2="154" y2="104" stroke="#CBBA95" strokeWidth="1.5" />
       <text
         x="100"
-        y="130"
+        y="126"
         textAnchor="middle"
-        fontFamily="Inter, sans-serif"
-        fontWeight="500"
-        fontSize="18"
+        fontFamily={GEIST_SANS_STACK}
+        fontWeight="700"
+        fontSize="20"
         fill="#F7F5EF"
-        letterSpacing="3">
-        RESIDENTIAL
+        letterSpacing="0.5">
+        Residential
       </text>
       <text
         x="100"
         y="156"
         textAnchor="middle"
-        fontFamily="Inter, sans-serif"
-        fontWeight="500"
-        fontSize="18"
-        fill="#CBBA95"
-        letterSpacing="3">
+        fontFamily={GEIST_SANS_STACK}
+        fontWeight="700"
+        fontSize="20"
+        fill="#F7F5EF"
+        letterSpacing="6">
         ADVISORS
       </text>
     </svg>

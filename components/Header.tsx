@@ -11,7 +11,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-ink-700/60 bg-ink-950/85 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Logo variant="wordmark" />
+        <Logo className="h-10 w-10 shrink-0" />
         <nav className="hidden items-center gap-8 md:flex">
           {LINKS.map((link) => (
             <a
