@@ -1,6 +1,7 @@
 interface LogoProps {
   className?: string
   variant?: "mark" | "wordmark"
+  style?: React.CSSProperties
 }
 
 const GEIST_SANS_STACK = "var(--font-geist-sans), Helvetica, Arial, sans-serif"
@@ -10,7 +11,7 @@ const GEIST_SANS_STACK = "var(--font-geist-sans), Helvetica, Arial, sans-serif"
  * site's own typeface) to match the reference redraw — bold grotesque type,
  * single border, no accent tint or divider rule.
  */
-export function Logo({ className = "", variant = "mark" }: LogoProps) {
+export function Logo({ className = "", variant = "mark", style }: LogoProps) {
   if (variant === "wordmark") {
     return (
       <div className={`flex items-center gap-3 ${className}`}>
@@ -23,7 +24,7 @@ export function Logo({ className = "", variant = "mark" }: LogoProps) {
   }
 
   return (
-    <svg viewBox="0 0 200 200" className={className} role="img" aria-label="London Residential Advisors">
+    <svg viewBox="0 0 200 200" className={className} style={style} role="img" aria-label="London Residential Advisors">
       <rect x="6" y="6" width="188" height="188" fill="#041A10" stroke="#FFFFFF" strokeWidth="4" />
       <text
         x="100"

@@ -1,4 +1,4 @@
-import { Logo } from "./Logo"
+import { ExpCobrand } from "./ExpCobrand"
 
 const LINKS = [
   { href: "#process", label: "Process" },
@@ -11,7 +11,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-ink/85 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Logo className="h-10 w-10 shrink-0" />
+        <ExpCobrand height={40} />
         <nav className="hidden items-center gap-8 md:flex">
           {LINKS.map((link) => (
             <a
