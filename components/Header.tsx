@@ -24,7 +24,7 @@ export function Header() {
         </nav>
         <a
           href="#contact"
-          className="rounded-full bg-white px-6 py-3 text-sm font-medium text-[#041A10] shadow-sm transition-all hover:bg-white/90">
+          className="hidden rounded-full bg-white px-6 py-3 text-sm font-medium text-[#041A10] shadow-sm transition-all hover:bg-white/90 md:inline-block">
           Book a Consultation
         </a>
       </div>
