@@ -8,6 +8,7 @@ interface ContactPayload {
 }
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+const NOTIFY_EMAIL = "team@londonresidentialadvisors.com"
 
 export async function POST(request: Request) {
   let body: Partial<ContactPayload>
@@ -26,31 +27,52 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Name, a valid email, and a message are required" }, { status: 400 })
   }
 
-  const webhookUrl = process.env.CONTACT_WEBHOOK_URL
+  const resendApiKey = process.env.RESEND_API_KEY
 
-  // No email provider has been chosen yet, so enquiries are relayed to an external
-  // webhook (e.g. a Resend/Zapier/Slack integration) rather than sent directly. If
-  // the webhook isn't configured, still return success so local dev/build doesn't
-  // require one — but log so the gap is visible.
-  if (!webhookUrl) {
-    console.warn("CONTACT_WEBHOOK_URL is not set — enquiry was not forwarded", { name, email, origin })
+  // Enquiries are emailed directly via Resend. If the key isn't configured,
+  // still return success so local dev/build doesn't require one — but log so
+  // the gap is visible.
+  if (!resendApiKey) {
+    console.warn("RESEND_API_KEY is not set — enquiry was not emailed", { name, email, origin })
     return NextResponse.json({ ok: true })
   }
 
+  const text = [
+    "New enquiry from the website:",
+    "",
+    `Name: ${name}`,
+    `Email: ${email}`,
+    origin ? `Relocating from: ${origin}` : null,
+    "",
+    "Message:",
+    message
+  ]
+    .filter((line) => line !== null)
+    .join("\n")
+
   try {
-    const webhookResponse = await fetch(webhookUrl, {
+    const emailResponse = await fetch("https://api.resend.com/emails", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email, origin, message, submittedAt: new Date().toISOString() })
+      headers: {
+        Authorization: `Bearer ${resendApiKey}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        from: "London Residential Advisors <onboarding@resend.dev>",
+        to: [NOTIFY_EMAIL],
+        reply_to: email,
+        subject: `New enquiry from ${name}`,
+        text
+      })
     })
 
-    if (!webhookResponse.ok) {
-      console.error("Contact webhook responded with an error", webhookResponse.status)
-      return NextResponse.json({ error: "Could not reach the enquiry service" }, { status: 502 })
+    if (!emailResponse.ok) {
+      console.error("Resend responded with an error", emailResponse.status, await emailResponse.text())
+      return NextResponse.json({ error: "Could not send the enquiry email" }, { status: 502 })
     }
   } catch (err) {
-    console.error("Failed to forward contact enquiry", err)
-    return NextResponse.json({ error: "Could not reach the enquiry service" }, { status: 502 })
+    console.error("Failed to send contact enquiry email", err)
+    return NextResponse.json({ error: "Could not send the enquiry email" }, { status: 502 })
   }
 
   return NextResponse.json({ ok: true })
