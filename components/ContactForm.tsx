@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { useState, type FormEvent } from "react"
 
 type Status = "idle" | "submitting" | "success" | "error"
@@ -71,6 +72,13 @@ export function ContactForm() {
         className="rounded-full bg-white px-6 py-3 text-sm font-medium text-[#041A10] shadow-sm transition-all hover:bg-white/90 disabled:cursor-not-allowed disabled:opacity-60">
         {status === "submitting" ? "Sending…" : "Send Enquiry"}
       </button>
+      <p className="font-sans text-xs leading-relaxed text-white/60">
+        We use your details to reply to your enquiry. See our{" "}
+        <Link href="/privacy" className="underline underline-offset-4 hover:text-white/80">
+          Privacy Notice
+        </Link>
+        .
+      </p>
       {status === "error" && (
         <p className="text-sm text-red-400">Something went wrong — please try again or email us directly.</p>
       )}

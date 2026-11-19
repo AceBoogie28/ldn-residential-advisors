@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 import { Logo } from "./Logo"
 import { ExpCobrand } from "./ExpCobrand"
 
@@ -12,6 +14,11 @@ export function Footer() {
             <p className="mt-1">
               London Residential Advisors is a trading style operated by Alexander Carroll, powered by
               eXp UK.
+            </p>
+            <p className="mt-1">
+              <Link href="/privacy" className="underline underline-offset-4 hover:text-white/70">
+                Privacy Notice
+              </Link>
             </p>
           </div>
         </div>
